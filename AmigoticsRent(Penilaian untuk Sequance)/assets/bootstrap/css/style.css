@@ -1,0 +1,111 @@
+@charset "UTF-8";
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --maroon: #AE5A5A;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #AE5A5A;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #AE5A5A;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+/*********************************
+1. Sistem Login
+*********************************/
+.sistem{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    align-items: center;
+    font-family: Poppins;
+}
+body{
+	align-items: center;
+    font-family: Poppins;
+}
+
+.background{
+	background-repeat : no-repeat;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+}
+.text-center{
+    color : #F3EBE7;
+}
+
+label{
+	color:rgba(255, 255, 255, 1);
+    font-size: 11pt;
+}
+.login{
+    color:rgba(255, 255, 255, 1);
+    font-weight: bolder;
+    padding-bottom: 0.8cm; 
+}
+.regist{
+    color:rgba(255, 255, 255, 1);
+    font-weight: bolder;
+    padding-bottom: 0.8cm;
+}
+.card{
+    background:rgba(18, 20, 27, 0.8);
+    width: 440px;
+}
+.btn-primary{
+	width: 100px;
+	margin-left: 120px;
+	margin-top: 30px;
+    background-color: rgba(106, 88, 99, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+	border-color: rgba(106, 88, 99, 1);
+}
+.btn-primary:hover{
+    cursor: pointer;
+    background: rgba(174, 90, 90, 1);
+    border-color: #85807D;
+}
+a{
+	color: #85807D;
+}
+.small{
+    color: #F3EBE7;
+}
+
+.text-log:hover{
+	color:#85807D;
+}
+
+.text-danger{
+    color: #F3EBE7 ;
+} 
+
+.btn-login{
+    justify-content: center;
+}
+
