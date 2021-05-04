@@ -14,9 +14,14 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins" />
-
     <!-- Core theme CSS (includes Bootstrap)-->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../../assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/styles.css'); ?>" />
+
 </head>
 
 <body id="page-top">
