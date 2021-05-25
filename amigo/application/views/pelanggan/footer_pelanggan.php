@@ -13,7 +13,6 @@
 <!-- Core theme JS-->
 <script src="assets/bootstrap/js/scripts.js"></script>
 <script src="assets/bootstrap/js/bayar-konfirmasi.js"></script>
-
 <!-- Contact-->
 <section class="page-section" id="contact">
     <div class="container">
