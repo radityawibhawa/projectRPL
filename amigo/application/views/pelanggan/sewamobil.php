@@ -1,8 +1,9 @@
 <script type='text/javascript'>
-    $(function() {
-        $('[data-toggle="tooltip"]').tooltip()
+    $(function() { //untuk menghubungkan project dengan jquery.js dan popper.js 
+        $('[data-toggle="tooltip"]').tooltip() //yang dimana bermaksud untuk memerintahkan tooltip() pada semua elemen yang memiliki atribute data-toggle="tooltip". 
     })
 </script>
+
 <!-- Masthead-->
 <header class="masthead">
     <div class="container">
@@ -13,7 +14,7 @@
 </header>
 
 <!-- daftar mobil-->
-<section class="page-section" id="daftarmobil">
+<section class="page-section" id="daftarmobil"> <!-- merupakan page section dari daftar mobil-->
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">DAFTAR MOBIL</h2>
@@ -21,10 +22,10 @@
     </div>
     <div class="row">
         <div class="column">
-            <img src="assets/img/alphard.jpg" alt="" style="width:340px;height:210px;">
+            <img src="assets/img/alphard.jpg" alt="" style="width:340px;height:210px;"> <!-- memanggil image/gambar tipe mobil-->
             <p></p>
-            <h5>Alphard</h5>
-            <p>Mulai dari Rp. 1.000.000</p>
+            <h5>Alphard</h5><!-- nama/jenis mobil-->
+            <p>Mulai dari Rp. 1.000.000</p> <!-- harga sewa mobil-->
         </div>
         <div class="column">
             <img src="assets/img/yaris.webp" alt="" style="width:340px;height:230px;">
@@ -74,8 +75,8 @@
     </div>
 
     <!-- halaman-->
-    <div class="column page">
-        <a style="font-size:100%;" href="#1" target="_blank">1</a>
+    <div class="column page"> <!-- merupakan column untuk membuat sebuah navigasi halaman -->
+        <a style="font-size:100%;" href="#1" target="_blank">1</a> 
         <a style="font-size:100%;" href="#2">2</a>
         <a style="font-size:100%;" href="#3">3</a><a>></a>
         <a style="font-size:100%;" href="#!">Halaman Selanjutnya</a>
