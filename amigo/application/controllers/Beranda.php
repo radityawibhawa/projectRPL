@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Beranda extends CI_Controller
 {
-
+// load model yg bernama m_auth
 	function __construct()
 	{
 		parent::__construct();
@@ -17,6 +17,7 @@ class Beranda extends CI_Controller
 		// } else if($this->session->userdata('role_id') == "2") {
 		// 	redirect('pelanggan');
 		// } else{
+//load folder vie dengan nama file header, beranda, footer
 		$data['title'] = 'Amigotics Rent - Beranda';
 		$this->load->view('pelanggan/header_pelanggan', $data);
 		$this->load->view('pelanggan/beranda');
