@@ -24,6 +24,5 @@ class Profil extends CI_Controller
         $this->load->view('pelanggan/footer_pelanggan');
         // }
 
-
     }
 }
