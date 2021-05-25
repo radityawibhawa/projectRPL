@@ -38,18 +38,18 @@ class m_auth extends CI_model
 
     public function deleteUser($id_pelanggan)
     {
-        $this->db->where('id_pelanggan', $id_pelanggan);
+        $this->db->where('id_pelanggan', $id_pelanggan); //database idpelanggan
         $this->db->delete('pelanggan');
     }
 
     public function getUserById($id_pelanggan)
     {
-        $this->db->where('id_pelanggan', $id_pelanggan);
+        $this->db->where('id_pelanggan', $id_pelanggan); //database idpelanggan
         return $this->db->get('pelanggan')->row_array();
     }
 
     public function insertAppointment($data)
     {
-        return $this->db->insert('appointment', $data);
+        return $this->db->insert('appointment', $data); //meload database 
     }
 }
