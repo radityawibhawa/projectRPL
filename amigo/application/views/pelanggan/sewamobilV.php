@@ -17,7 +17,7 @@
         <link href="assets/css/sewamobilstyle.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation-->
+        <!-- menampilkan Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/logos.png" alt="" /></a>
@@ -46,7 +46,7 @@
             </div>
         </header>
 
-        <!-- daftar mobil-->
+        <!-- menampilkan daftar mobil-->
         <section class="page-section" id="daftarmobil">
             <div class="container">
                 <div class="text-center">
