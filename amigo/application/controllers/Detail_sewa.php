@@ -23,6 +23,5 @@ class Detail_sewa extends CI_Controller
         $this->load->view('pelanggan/footer_pelanggan');
         // }
 
-
     }
 }
