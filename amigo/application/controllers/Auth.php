@@ -49,7 +49,7 @@ class Auth extends CI_Controller
         $found = $this->m_auth->login($email, $password);
         $pelanggan = $this->db->get_where('pelanggan', ['email' => $email])->row_array();
 
-        //pengecekkan apakah email dan pass tersebut cocok dan telah terdaftar atau tidak
+        //pengecekkan apakah email dan password tersebut cocok dan telah terdaftar atau tidak
         if ($found) {
             if ($pelanggan['password'] == $password) {
                 $data = [
