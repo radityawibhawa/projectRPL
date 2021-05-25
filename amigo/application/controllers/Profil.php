@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Profil extends CI_Controller
 {
-
+    //meloading model yang bernama m_auth
     function __construct()
     {
         parent::__construct();
@@ -17,6 +17,7 @@ class Profil extends CI_Controller
         // } else if($this->session->userdata('role_id') == "2") {
         // 	redirect('pelanggan');
         // } else{
+//meloading  view Beranda, dan header,profil,footer di folder pelanggan
         $data['title'] = 'Amigotics Rent - Beranda';
         $this->load->view('pelanggan/header_pelanggan', $data);
         $this->load->view('pelanggan/profil');
