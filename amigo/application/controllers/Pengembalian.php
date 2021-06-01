@@ -17,7 +17,7 @@ class Pengembalian extends CI_Controller //menamaan class controller
         // } else if($this->session->userdata('role_id') == "2") {
         // 	redirect('pelanggan');
         // } else{
-        $data['title'] = 'Amigotics Rent - Beranda'; 
+        $data['title'] = 'Amigotics Rent - Pengembalian'; 
         $this->load->view('pelanggan/header_pelanggan', $data); //meload views header
         $this->load->view('pelanggan/pengembalian'); //meload views pengembalian
         $this->load->view('pelanggan/footer_pelanggan'); //meload views footer
