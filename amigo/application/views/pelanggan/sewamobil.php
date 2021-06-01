@@ -21,6 +21,15 @@
         </div>
     </div>
     <div class="row">
+		<!-- Code yang akan digunakan ketika fungsi upload gambar telah berhasil
+		<?php foreach ($list_mobil as $mobil) : ?>
+            <div class="column">
+                <img src="<?php echo base_url('assets/img/' . $mobil->gambar_mobil) ?>" width="340px" height="210px" />
+                <p></p>
+                <h5><?php echo $mobil->jenis_mobil ?></h5>
+                <p><?php echo $mobil->start_harga ?></p>
+            </div>
+        <?php endforeach; ?> -->
         <div class="column">
             <img src="assets/img/alphard.jpg" alt="" style="width:340px;height:210px;"> <!-- memanggil image/gambar tipe mobil-->
             <p></p>
