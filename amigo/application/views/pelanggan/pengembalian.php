@@ -22,7 +22,7 @@
             <p style="font-size:130%;" style="text-align:left;"> Tengat Waktu : 04/04/2021</p>
         </div>
         <div class="column right">
-            <a class="btn btn-primary" href="#submited">Konfirmasi Pengembalian</a><!--berisi button untuk mengkonfirmasi pengembalian-->
+            <a class="btn btn-primary" href="<?= base_url('Detail_kembali'); ?>">Konfirmasi Pengembalian</a>
         </div>
         <p>* Silahkan lakukan segera konfirmasi pengembalian ketika tenggat waktu telah habis.<br><!--berisi note untuk user-->
             Jika ingin menambahkan hari penyewaan silahkan konfirmasi ke Customer Service kami dalam kurung waktu 24 jam ketika tenggat waktu telah habis.<br>
