@@ -18,7 +18,7 @@ class Profil extends CI_Controller
         // 	redirect('pelanggan');
         // } else{
 //meloading  view Beranda, dan header,profil,footer di folder pelanggan
-        $data['title'] = 'Amigotics Rent - Beranda';
+        $data['title'] = 'Amigotics Rent - Profil Anda';
         $this->load->view('pelanggan/header_pelanggan', $data);
         $this->load->view('pelanggan/profil');
         $this->load->view('pelanggan/footer_pelanggan');
