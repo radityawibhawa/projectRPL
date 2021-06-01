@@ -1,6 +1,6 @@
 <?php
 
-class model extends CI_model
+class m_sewamobil extends CI_model
 {
     private $_table = "mobil"; //nama tabel
     //nama kolom di tabel, harus sama huruf besar dan huruf kecilnya
@@ -86,7 +86,7 @@ class model extends CI_model
         $this->load->library('upload', $config); //load library upload dengan konfigurasi yang sudah ditentukan
 
         if ($this->upload->do_upload('gambar_mobil')) {
-            return $this->upload->data("file_name");
+            return $this->upload->data('file_name');
         }
         //print_r($this->upload->display_errors());
         return "default.jpg"; //jika upload gagal maka akan dikembalikan ke default.jpg
