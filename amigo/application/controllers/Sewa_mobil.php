@@ -17,11 +17,11 @@ class Sewa_mobil extends CI_Controller // menamakan class controller
         // } else if($this->session->userdata('role_id') == "2") {
         // 	redirect('pelanggan');
         // } else{
-        $data['title'] = 'Amigotics Rent - Beranda'; 
-        $this->load->view('pelanggan/header_pelanggan', $data); //meload view header_pelanggan
-        $this->load->view('pelanggan/sewamobil'); //meload view sewamobil
-        $this->load->view('pelanggan/footer_pelanggan'); //meload view footer_pelanggan
-        // }
+        $titel['title'] = 'Amigotics Rent - Sewa Mobil';
+        $data['list_mobil'] = $this->model->getAll();
+        $this->load->view('pelanggan/header_pelanggan', $titel);
+        $this->load->view('pelanggan/sewamobil', $data);
+        $this->load->view('pelanggan/footer_pelanggan');
+	}
 
-    }
 }
