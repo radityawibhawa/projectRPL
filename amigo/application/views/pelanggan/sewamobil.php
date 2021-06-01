@@ -24,7 +24,7 @@
             <div class="column">
                 <img src="<?php echo base_url('assets/img/' . $mobil->gambar_mobil) ?>" width="340px" height="210px" />
                 <p></p>
-                <h5><?php echo $mobil->jenis_mobil ?></h5>
+                <h5><a href="<?= base_url('Detail_sewa'); ?>"><?php echo $mobil->jenis_mobil ?></a></h5>
                 <p><?php echo $mobil->start_harga ?></p>
             </div>
         <?php endforeach; ?>
