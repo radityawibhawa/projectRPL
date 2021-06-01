@@ -17,7 +17,7 @@ class Detail_kembali extends CI_Controller
         // } else if($this->session->userdata('role_id') == "2") {
         // 	redirect('pelanggan');
         // } else{
-        $data['title'] = 'Amigotics Rent - Beranda';
+        $data['title'] = 'Amigotics Rent - Detail Pengembalian';
         $this->load->view('pelanggan/header_pelanggan', $data);
         $this->load->view('pelanggan/detail_kembali');
         $this->load->view('pelanggan/footer_pelanggan');
