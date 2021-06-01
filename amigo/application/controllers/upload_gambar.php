@@ -7,7 +7,7 @@ class upload_gambar extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('model');
+        $this->load->model('m_sewamobil');
         $this->load->library("form_validation");
     }
 
@@ -27,7 +27,7 @@ class upload_gambar extends CI_Controller
 
     public function tambah()
     {
-        $mobil = $this->model;
+        $mobil = $this->m_sewamobil;
         $validation = $this->form_validation;
         $validation->set_rules($mobil->rules());
 
@@ -35,7 +35,7 @@ class upload_gambar extends CI_Controller
             $mobil->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
-        $data['title'] = 'Amigotics Rent - Beranda';
+        $data['title'] = 'Amigotics Rent';
         $this->load->view('templates/auth_header', $data);
         $this->load->view('templates/form_upload');
         $this->load->view('templates/auth_footer');
@@ -43,7 +43,7 @@ class upload_gambar extends CI_Controller
     // public function edit($id = null){
     //     if (!isset($id)) redirect('upload_gambar');
 
-    //     $mobil = $this->model;
+    //     $mobil = $this->m_sewamobil;
     //     $validation = $this->form_validation;
     //     $validation->set_rules($mobil->rules());
 
@@ -58,7 +58,7 @@ class upload_gambar extends CI_Controller
     // }
     // public function delete($id = null){
     //     if(!isset($id)) show_404();
-    //     if($this->model->delete($id)){
+    //     if($this->m_sewamobil->delete($id)){
     //         redirect('upload_gambar');
     //     }
     // }
