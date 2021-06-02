@@ -18,6 +18,7 @@ class Detail_sewa extends CI_Controller
         // 	redirect('pelanggan');
         // } else{
         $data['title'] = 'Amigotics Rent - Detail Penyewaan';
+		#disini meload view dari pelanggan untuk headet, deatil dewa, dan footer
         $this->load->view('pelanggan/header_pelanggan', $data);
         $this->load->view('pelanggan/detail_sewa');
         $this->load->view('pelanggan/footer_pelanggan');
