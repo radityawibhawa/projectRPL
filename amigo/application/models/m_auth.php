@@ -6,8 +6,8 @@ class m_auth extends CI_model
     public function login($email)
     {
         //pengecekkan email yang di inputkan oleh pengguna apakah sudah terdaftar dalam database atau tidak
-        $pelanggan = $this->db->get_where('pelanggan', ['email' => $email])->row_array();
-        if ($pelanggan) {
+        $user = $this->db->get_where('user', ['email' => $email])->row_array();
+        if ($user) {
             // usernya ada
             return true;
         } else {
@@ -15,18 +15,18 @@ class m_auth extends CI_model
             return false;
         }
     }
-    //mengambil semua data table pelanggan dari database
+    //mengambil semua data table user dari database
     public function getAllUser()
     {
-        return $this->db->get('pelanggan')->result_array();
+        return $this->db->get('user')->result_array();
     }
-    //memasukkan data ke table pelanggan
+    //memasukkan data ke table user
     public function insertUser($data)
     {
-        return $this->db->insert('pelanggan', $data);
+        return $this->db->insert('user', $data);
     }
-    //fungsi untuk mengedit data user berdasarkan id pelanggan
-    public function editUser($id_pelanggan)
+    //fungsi untuk mengedit data user berdasarkan id 
+    public function editUser($id_user)
     {
         $data = [
             'nama' => $this->input->post('nama', true),
@@ -34,24 +34,30 @@ class m_auth extends CI_model
             'no_hp' => $this->input->post('no_hp'),
             'password' => $this->input->post('password')
         ];
-        $this->db->where('id_pelanggan', $id_pelanggan);
-        $this->db->update('pelanggan', $data);
+        $this->db->where('id_user', $id_user);
+        $this->db->update('user', $data);
     }
-    //fungsi untuk menghapus data user berdasarkan id_pelanggan
-    public function deleteUser($id_pelanggan)
+    //fungsi untuk menghapus data user berdasarkan id_user
+    public function deleteUser($id_user)
     {
-        $this->db->where('id_pelanggan', $id_pelanggan);
-        $this->db->delete('pelanggan');
+        $this->db->where('id_user', $id_user);
+        $this->db->delete('user');
     }
-    //mengambil data user dari id_pelanggan
-    public function getUserById($id_pelanggan)
+    //mengambil data user dari id_user
+    public function getUserById($id_user)
     {
-        $this->db->where('id_pelanggan', $id_pelanggan);
-        return $this->db->get('pelanggan')->row_array();
+        $this->db->where('id_user', $id_user);
+        return $this->db->get('user')->row_array();
     }
 
     // public function insertAppointment($data)
     // {
     //     return $this->db->insert('appointment', $data);
     // }
+
+    public function get_id_user_by_email($email){
+        return $this->db->where('email',$email)
+                        ->get('user')
+                        ->row();
+    }
 }
