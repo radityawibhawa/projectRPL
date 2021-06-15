@@ -2,7 +2,7 @@
 
 class m_sewamobil extends CI_model
 {
-    private $_table = "mobil"; //nama tabel
+    private $_table = "cars"; //nama tabel
     //nama kolom di tabel, harus sama huruf besar dan huruf kecilnya
     public $id_mobil;
     public $jenis_mobil;
@@ -100,6 +100,41 @@ class m_sewamobil extends CI_model
             //cari file berdasarkan nama tersebut dengan fungsi glob()
             //setelah file ditemukan, lalu kita gunakan fungsi array_map() untuk mengeksekusi unlink() pada tiap file yang ditemukan
             return array_map('unlink', glob(FCPATH . "./assets/img/$filename.*")); //mengambil semua ekstensi yang dipilih
+        }
+    }
+
+    public function input_rent($idUser){
+        date_default_timezone_set('Asia/Jakarta');
+        $timestamp = date('Y-m-d H:i:s');
+        $data = array (
+            'id_user'           => $idUser,
+            'id_mobil'          => $this->input->post('idMobil'),
+            'tgl_sewa'          => $this->input->post('tglPenyewaan'),
+            'tgl_kembali'       => $this->input->post('tglPengembalian'),
+            'waktu_ambil'       => $this->input->post('waktu'),
+            'alamat'            => $this->input->post('alamat'),
+            'totalHariPinjam'   => $this->input->post('hari'),
+            'total_bayar'       => $this->input->post('total'),
+            'nama_rekening'     => $this->input->post('nama-rekening'),
+            'nomor_kartu'       => $this->input->post('nomor-rekening'),
+            'masa_akhir_kartu'  => strval($this->input->post('MM')).'-'.strval($this->input->post('YY')),
+            'cvv'               => $this->input->post('CVV'),
+            'created_at'        => $timestamp,
+            'status'            => 'WAITING'
+        );
+
+        $this->db->insert('rent',$data);
+
+        $dataa = array (
+            'status'    => 'UNAVAILABLE'
+        );
+        $this->db->where('id_mobil', $this->input->post('idMobil'))
+                ->update('cars',$dataa);
+
+        if ($this->db->affected_rows() > 0) {
+            return TRUE;
+        }else {
+            return FALSE;
         }
     }
 }
